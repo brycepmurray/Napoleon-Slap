@@ -1,1 +1,22 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
+
+body {
+    background-image: url("https://cdn.instructables.com/FSR/MBXL/GD2J3DPB/FSRMBXLGD2J3DPB.MEDIUM.jpg");
+    background-size: 1400px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+}

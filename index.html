@@ -1,12 +1,54 @@
 <html>
+
 <head>
-	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	
+    <title>Slap Object Game</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
+
 <body>
-	
-	<script src=""></script>
+    <header>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="labels">
+                    <div class="col-md-3">
+                        <p>Health: <span id="p1-health">Health</span></p>
+                        <p>Hits: <span id="p1-hits">Hits</span></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Health: <span id="health">Health</span></p>
+                        <p>Hits: <span id="hits">Hits</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="pictures">
+                <img src="http://images.vectorhq.com/images/previews/2e2/napoleon-dynamite-psd-463165.png" alt="Napoleon">
+                <img src="https://fanart.tv/fanart/movies/8193/hdmovielogo/napoleon-dynamite-51280ef822b29.png" alt="Napoleon Dynamite Banner">
+                <img src="http://www.snakkle.com/wp-content/uploads/2012/01/deidrich-bader-napoleon-dynamite-movie-photo-GC.jpg" alt="Rex Kwon Do">
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="container">
+            <div class="row">
+                <div class="buttons">
+                    <button class="btn btn-default" onclick="slap()"><h3>Slap!</h3></button>
+                    <button class="btn btn-default" onclick="nunchuckSkills()"><h3>Nunchuck Skills!</h3></button>
+                    <button class="btn btn-default" onclick="bowstaffSkills()"><h3>Bowstaff Skills!</h3></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script src="game.js"></script>
 </body>
+
 </html>
