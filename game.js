@@ -36,8 +36,12 @@ function bowstaffSkills(Rex) {
     update()
 }
 
+function items(arr) {
+
+}
+
 //function RexChoice() {
-//  var choices = [1, 5, 10]
+//  var choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //   var num = Math.floor(Math.random() * choices.length);
 //  return choices[num] {
 
