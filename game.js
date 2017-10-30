@@ -9,16 +9,18 @@ var player = function(health, items, attacks, hits) {
     this.hits = hits
 }
 var Napoleon = new player(100, [{
-            grapeFruit: ("attack boost", 0.5, "Napoleon Throws a Grape Fruit!"),
-            tinaTheLlama: ("defense boost", 1, "Tina the Llama comes to your defense"),
-            tots: ("health boost", 25, "You Eat Some of your secret Tots")],
-        [slap, nunchuckSkills, bowstaffSkills], 0);
+    grapeFruit: ("attack boost", 0.5, "Napoleon Throws a Grape Fruit!"),
+    tinaTheLlama: ("defense boost", 1, "Tina the Llama comes to your defense"),
+    tots: ("health boost", 25, "You Eat Some of your secret Tots")
+}], [slap, nunchuckSkills, bowstaffSkills], 0);
 
-    var Rex = new player(100, ['Starla', 'These Bad Boys', 'Break the Wrist, and Walk Away'], [slap, nunchuckSkills, bowstaffSkills], 0)
+var Rex = new player(100, [{
+    breakTheWrist: ("attack boost", 0.5, "Rex Breaks Your Wrist then walks Away!"),
+    theseBadBoys: ("defense boost", 1, "No One Wants A Round-House Kick to The Face While You're Wearing These Bad Boys!"),
+    starla: ("health boost", 25, "You Think He Feels Like A Failure Cause He Goes Home To Starla At Night?....Forget About It!")
+}], [slap, nunchuckSkills, bowstaffSkills], 0)
 
-    var attacks = [slap, nunchuckSkills, bowstaffSkills];
-
-}
+var attacks = [slap, nunchuckSkills, bowstaffSkills];
 
 function slap(Rex) {
     Rex.health -= 1;
