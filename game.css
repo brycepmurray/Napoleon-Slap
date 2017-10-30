@@ -20,3 +20,9 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}

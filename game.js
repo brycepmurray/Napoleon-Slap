@@ -4,15 +4,21 @@ function gameBrains(slap, nunchuckSkills, bowstaffSkills) {
 
 var player = function(health, items, attacks, hits) {
     this.health = health;
-    this.items = items;
     this.attacks = attacks;
+    this.items = items;
     this.hits = hits
 }
-var Napoleon = new player(100, ['grapefruit', 'tots', 'tina'], [slap, nunchuckSkills, bowstaffSkills], 0);
+var Napoleon = new player(100, [{
+            grapeFruit: ("attack boost", 0.5, "Napoleon Throws a Grape Fruit!"),
+            tinaTheLlama: ("defense boost", 1, "Tina the Llama comes to your defense"),
+            tots: ("health boost", 25, "You Eat Some of your secret Tots")],
+        [slap, nunchuckSkills, bowstaffSkills], 0);
 
-var Rex = new player(100, ['Starla', 'These Bad Boys', 'Break the Wrist, and Walk Away'], [slap, nunchuckSkills, bowstaffSkills], 0)
+    var Rex = new player(100, ['Starla', 'These Bad Boys', 'Break the Wrist, and Walk Away'], [slap, nunchuckSkills, bowstaffSkills], 0)
 
-var attacks = [slap, nunchuckSkills, bowstaffSkills];
+    var attacks = [slap, nunchuckSkills, bowstaffSkills];
+
+}
 
 function slap(Rex) {
     Rex.health -= 1;
