@@ -8,7 +8,11 @@ var Player = function(health, attacks, hits) {
     this.attacks = attacks;
     this.hits = hits
 }
-var Napoleon = new player(100, [slap, nunchuckSkills, bowstaffSkills], 0);
+
+var Items = function(items) {
+    this.items
+}
+var Napoleon = new Player(100, [slap, nunchuckSkills, bowstaffSkills], 0);
 
 var grapeFruit = new Item("attack boost", 2, "Napoleon Throws a Grape Fruit!")
 var tinaTheLlama = new Item("defense boost", 1, "Tina the Llama comes to your defense")
@@ -16,7 +20,7 @@ var tots = new Item("health boost", 25, "You Eat Some of your secret Tots")
 
 Napoleon.items.push(grapeFruit, tinaTheLlama)
 
-var Rex = new player(100, [slap, nunchuckSkills, bowstaffSkills], 0)
+var Rex = new Player(100, [slap, nunchuckSkills, bowstaffSkills], 0)
 
 var breakTheWrist = new Item("attack boost", 2, "Rex Breaks Your Wrist then walks Away!")
 var theseBadBoys = new Item("defense boost", 1, "No One Wants A Round-House Kick to The Face While You're Wearing These Bad Boys!")
