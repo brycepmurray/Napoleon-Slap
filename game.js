@@ -2,23 +2,27 @@ function gameBrains(slap, nunchuckSkills, bowstaffSkills) {
 
 }
 
-var player = function(health, items, attacks, hits) {
+var Player = function(health, attacks, hits) {
     this.health = health;
+    this.items = [];
     this.attacks = attacks;
-    this.items = items;
     this.hits = hits
 }
-var Napoleon = new player(100, [{
-    grapeFruit: ("attack boost", 2, "Napoleon Throws a Grape Fruit!"),
-    tinaTheLlama: ("defense boost", 1, "Tina the Llama comes to your defense"),
-    tots: ("health boost", 25, "You Eat Some of your secret Tots")
-}], [slap, nunchuckSkills, bowstaffSkills], 0);
+var Napoleon = new player(100, [slap, nunchuckSkills, bowstaffSkills], 0);
 
-var Rex = new player(100, [{
-    breakTheWrist: ("attack boost", 2, "Rex Breaks Your Wrist then walks Away!"),
-    theseBadBoys: ("defense boost", 1, "No One Wants A Round-House Kick to The Face While You're Wearing These Bad Boys!"),
-    starla: ("health boost", 25, "You Think He Feels Like A Failure Cause He Goes Home To Starla At Night?....Forget About It!")
-}], [slap, nunchuckSkills, bowstaffSkills], 0)
+var grapeFruit = new Item("attack boost", 2, "Napoleon Throws a Grape Fruit!")
+var tinaTheLlama = new Item("defense boost", 1, "Tina the Llama comes to your defense")
+var tots = new Item("health boost", 25, "You Eat Some of your secret Tots")
+
+Napoleon.items.push(grapeFruit, tinaTheLlama)
+
+var Rex = new player(100, [slap, nunchuckSkills, bowstaffSkills], 0)
+
+var breakTheWrist = new Item("attack boost", 2, "Rex Breaks Your Wrist then walks Away!")
+var theseBadBoys = new Item("defense boost", 1, "No One Wants A Round-House Kick to The Face While You're Wearing These Bad Boys!")
+var starla = new Item("health boost", 25, "You Think He Feels Like A Failure Cause He Goes Home To Starla At Night?....Forget About It!")
+
+Rex.items.push(breakTheWrist, theseBadBoys, starla)
 
 var attacks = [slap, nunchuckSkills, bowstaffSkills];
 
