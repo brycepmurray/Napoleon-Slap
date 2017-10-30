@@ -12,7 +12,7 @@ var Napoleon = new player(100, ['grapefruit', 'tots', 'tina'], [slap, nunchuckSk
 
 var Rex = new player(100, ['Starla', 'These Bad Boys', 'Break the Wrist, and Walk Away'], [slap, nunchuckSkills, bowstaffSkills], 0)
 
-var attacks = { slap, nunchuckSkills, bowstaffSkills };
+var attacks = [slap, nunchuckSkills, bowstaffSkills];
 
 function slap(Rex) {
     Rex.health -= 1;
@@ -36,14 +36,17 @@ function bowstaffSkills(Rex) {
     update()
 }
 
-function items(arr) {
+//function items(arr) {
+// this.arr;
+//}
 
-}
+//var arr = new items
 
 //function RexChoice() {
 //  var choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //   var num = Math.floor(Math.random() * choices.length);
-//  return choices[num] {
+//
+//  {
 
 
 function update() {
@@ -51,5 +54,11 @@ function update() {
     document.getElementById("Napoleon.hits").innerText = Napoleon.hits;
     document.getElementById("Rex.health").innerText = Rex.health;
     document.getElementById("Rex.hits").innerText = Rex.hits
+    if (Napoleon.health <= 0) {
+        document.getElementsByClassName("buttons").innerHTML = "<h3> You're a Freaking Bowdaggit! </h3>"
+    }
+    if (Rex.health <= 0) {
+        document.getElementsByClassName("buttons").innerHTML = "<h3> You are Freakin Sweet! </h3>"
+    }
 }
 update()
