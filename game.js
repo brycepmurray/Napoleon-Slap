@@ -9,13 +9,13 @@ var player = function(health, items, attacks, hits) {
     this.hits = hits
 }
 var Napoleon = new player(100, [{
-    grapeFruit: ("attack boost", 0.5, "Napoleon Throws a Grape Fruit!"),
+    grapeFruit: ("attack boost", 2, "Napoleon Throws a Grape Fruit!"),
     tinaTheLlama: ("defense boost", 1, "Tina the Llama comes to your defense"),
     tots: ("health boost", 25, "You Eat Some of your secret Tots")
 }], [slap, nunchuckSkills, bowstaffSkills], 0);
 
 var Rex = new player(100, [{
-    breakTheWrist: ("attack boost", 0.5, "Rex Breaks Your Wrist then walks Away!"),
+    breakTheWrist: ("attack boost", 2, "Rex Breaks Your Wrist then walks Away!"),
     theseBadBoys: ("defense boost", 1, "No One Wants A Round-House Kick to The Face While You're Wearing These Bad Boys!"),
     starla: ("health boost", 25, "You Think He Feels Like A Failure Cause He Goes Home To Starla At Night?....Forget About It!")
 }], [slap, nunchuckSkills, bowstaffSkills], 0)
@@ -44,11 +44,12 @@ function bowstaffSkills(Rex) {
     update()
 }
 
-//function items(arr) {
-// this.arr;
-//}
+function itemPowers(Napoleon, Rex) {
+    if (Napoleon.items[1]) {}
 
-//var arr = new items
+}
+
+
 
 //function RexChoice() {
 //  var choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
