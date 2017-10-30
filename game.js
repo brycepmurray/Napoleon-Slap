@@ -9,8 +9,10 @@ var Player = function(health, attacks, hits) {
     this.hits = hits
 }
 
-var Items = function(items) {
-    this.items
+var Item = function(name, modifier, comment) {
+    this.name = name
+    this.modifier = modifier
+    this.comment = comment
 }
 var Napoleon = new Player(100, [slap, nunchuckSkills, bowstaffSkills], 0);
 
@@ -18,7 +20,9 @@ var grapeFruit = new Item("attack boost", 2, "Napoleon Throws a Grape Fruit!")
 var tinaTheLlama = new Item("defense boost", 1, "Tina the Llama comes to your defense")
 var tots = new Item("health boost", 25, "You Eat Some of your secret Tots")
 
-Napoleon.items.push(grapeFruit, tinaTheLlama)
+Napoleon.items.push(grapeFruit, tinaTheLlama, tots)
+
+console.log(Napoleon)
 
 var Rex = new Player(100, [slap, nunchuckSkills, bowstaffSkills], 0)
 
