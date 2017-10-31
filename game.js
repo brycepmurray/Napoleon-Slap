@@ -37,13 +37,19 @@ var attacks = [slap, nunchuckSkills, bowstaffSkills];
 function slap(Rex) {
     Rex.health -= 1;
     Rex.hits += 1
-        //alert(health)
+    if (Rex.health <= 0) {
+        return Rex.health = 0
+    }
+    //alert(health)
     update()
 }
 
 function nunchuckSkills(Rex) {
     Rex.health -= 5;
     Rex.hits += 1;
+    if (Rex.health <= 0) {
+        return Rex.health = 0
+    }
     //alert(health)
     update()
 
@@ -52,6 +58,9 @@ function nunchuckSkills(Rex) {
 function bowstaffSkills(Rex) {
     Rex.health -= 10;
     Rex.hits += 1;
+    if (Rex.health <= 0) {
+        return Rex.health = 0
+    }
     //alert(health)
     update()
 }
